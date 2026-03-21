@@ -3,3 +3,17 @@
 @use './base/base' as *;
 @use './base/reset' as *;
 @use './base/typography' as *;
+@use './components/button' as *;
+@use './layout/header' as *;
+@use './sections/hero' as *;
+@use './sections/advantages' as *;
+@use './sections/speakers' as *;
+@use './sections/programms' as *;
+@use './sections/results' as *;
+@use './sections/who' as *;
+@use './sections/reviews' as *;
+@use './sections/reasons' as *;
+@use './sections/faq' as *;
+@use './sections/form' as *;
+
+@use './layout/media' as *;

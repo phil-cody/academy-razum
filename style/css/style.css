@@ -1,7 +1,462 @@
 * {
-  margin: 0;
-  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  color: #120e1d;
+  font-size: 20px;
+  background-color: #fff;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.06em;
+  color: #120e1d;
+}
+
+h1 {
+  font-size: 70px;
+}
+
+h2 {
+  font-size: 45px;
+}
+
+h3 {
+  font-size: 35px;
+}
+
+h4 {
+  font-size: 30px;
+}
+
+h5 {
+  font-size: 25px;
+}
+
+h6 {
+  font-size: 20px;
+}
+
+a {
+  color: #120e1d;
+}
+
+input:focus::placeholder,
+textarea:focus::placeholder {
+  color: transparent;
+}
+
+input:focus::-webkit-input-placeholder,
+textarea:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+input:focus::-moz-placeholder,
+textarea:focus::-moz-placeholder {
+  color: transparent;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #120e1d;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1440px;
+}
+
+/* Reset and base styles  */
+* {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+}
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
+}
+
+/* Links */
+a,
+a:link,
+a:visited,
+a:hover {
+  text-decoration: none;
+}
+
+/* Common */
+aside,
+nav,
+footer,
+header,
+section,
+main {
+  display: block;
+}
+
+ul,
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Form */
+input::-ms-clear {
+  display: none;
+}
+
+button,
+input[type=submit] {
+  display: inline-block;
+  box-shadow: none;
+  background-color: transparent;
+  background: none;
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+label {
+  cursor: pointer;
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url("../../../fonts/Manrope-VariableFont_wght.ttf");
+}
+.btn {
+  padding: 22px 40px;
+  background-color: #120e1d;
+  border-radius: 15px;
+  color: #fff;
+}
+
+.btn a {
+  color: #fff;
+}
+
+.header {
+  background-color: #f1f1f1;
+  padding: 0 15px;
+}
+.header .container {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__logo {
+  width: 74px;
+}
+.header__nav ul {
+  display: flex;
+  gap: 60px;
+  font-size: 10px;
+}
+.header__contact {
+  display: flex;
+  gap: 10px;
+}
+.header__contact span a {
+  font-weight: 700;
+  color: #637cf9;
+  font-size: 10px;
+}
+.header__contact button {
+  padding: 10px 52px;
+}
+.header__burger {
+  display: none;
+}
+
+.hero {
+  background-color: #f1f1f1;
+  padding: 15px 15px 0;
+}
+.hero .container {
+  border-radius: 50px;
+  display: flex;
+  background-image: url("../../../image/backgrounds/hero-background.webp");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: auto 100%;
+  position: relative;
+  z-index: 1;
+}
+.hero .container:before {
+  z-index: 0;
+  content: "";
+  position: absolute;
+  border-radius: 50px;
+  width: 80%;
+  height: 100%;
+  background: linear-gradient(to right, #637cf9 57%, transparent);
+}
+.hero__text {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 157px 50px;
+  max-width: 74%;
+}
+.hero__text h1, .hero__text p {
+  color: #fff;
+}
+.hero__text p {
+  max-width: 76%;
+}
+
+.advantages {
+  background-color: #f1f1f1;
+  padding: 120px 15px 0;
+}
+.advantages .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  text-align: center;
+}
+.advantages .container .banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  border-radius: 30px;
+  background-color: #637cf9;
+  width: 100%;
+  padding: 70px 60px;
+}
+.advantages .container .banner h3 {
+  color: #fff;
+  max-width: 396px;
+}
+.advantages .container .banner__content {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+.advantages .container .banner__content .block {
+  width: calc((100% - 20px) / 3);
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 50px 30px 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 35px;
+}
+.advantages .container .banner__content .block__text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+  text-align: left;
+}
+.advantages .container .btn {
+  padding: 22px 77px;
+}
+.advantages .container .btn a::before {
+  content: url("../../../image/dot.svg");
+  width: 9px;
+  position: relative;
+  left: -10px;
+}
+
+@media (max-width: 1024px) {
+  .header__nav ul {
+    gap: 20px;
+  }
+  .header__contact button {
+    padding: 8px 35px;
+  }
+  .hero {
+    padding-top: 25px;
+  }
+  .hero .container {
+    border-radius: 20px;
+  }
+  .hero .container:before {
+    border-radius: 20px;
+    background: linear-gradient(to right, #637cf9 65%, transparent);
+  }
+  .hero__text {
+    gap: 20px;
+    padding: 100px 30px;
+    max-width: 568px;
+  }
+  .hero__text h1 {
+    font-size: 45px;
+  }
+  .hero__text p {
+    font-size: 16px;
+  }
+  .advantages {
+    padding-top: 70px;
+  }
+  .advantages .container {
+    gap: 20px;
+  }
+  .advantages .container h2 {
+    font-size: 30px;
+  }
+  .advantages .container .banner {
+    gap: 20px;
+    border-radius: 20px;
+    padding: 50px 16px;
+  }
+  .advantages .container .banner h3 {
+    font-size: 20px;
+    max-width: 100%;
+  }
+  .advantages .container .banner__content .block {
+    width: calc((100% - 20px) / 3);
+    border-radius: 10px;
+    padding: 25px 15px;
+    gap: 30px;
+  }
+  .advantages .container .banner__content .block__text h5 {
+    font-size: 20px;
+  }
+  .advantages .container .banner__content .block__text p {
+    font-size: 16px;
+  }
+}
+@media (max-width: 768px) {
+  .header__nav {
+    display: none;
+  }
+  .header__contact {
+    display: none;
+  }
+  .header__burger {
+    display: block;
+  }
+}
+@media (max-width: 665px) {
+  .hero__text {
+    gap: 25px;
+    padding: 30px 20px;
+  }
+  .hero__text h1 {
+    font-size: 35px;
+  }
+  .hero__text p {
+    font-size: 12px;
+    max-width: 300px;
+  }
+  .advantages {
+    padding-top: 70px;
+  }
+  .advantages .container {
+    gap: 20px;
+  }
+  .advantages .container h2 {
+    font-size: 30px;
+  }
+  .advantages .container .banner {
+    gap: 20px;
+    border-radius: 20px;
+    padding: 40px 25px;
+  }
+  .advantages .container .banner h3 {
+    font-size: 20px;
+    max-width: 100%;
+  }
+  .advantages .container .banner__content {
+    flex-direction: column;
+    gap: 5px;
+  }
+  .advantages .container .banner__content .block {
+    width: 100%;
+    border-radius: 10px;
+    padding: 25px 15px;
+    gap: 25px;
+  }
+  .advantages .container .banner__content .block__text {
+    max-width: 90%;
+  }
+  .advantages .container .banner__content .block__text h5 {
+    font-size: 20px;
+  }
+  .advantages .container .banner__content .block__text p {
+    font-size: 14px;
+  }
+  .advantages .container .btn {
+    padding: 20px 90px;
+  }
+  .btn {
+    font-size: 14px;
+  }
+}
+@media (max-width: 430px) {
+  .header {
+    margin-top: 10px;
+  }
+  .header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header__logo {
+    width: 74px;
+  }
+  .hero {
+    padding-top: 25px;
+  }
+  .hero .container {
+    background-size: 135% auto;
+    background-position: bottom right;
+  }
+  .hero .container:before {
+    width: 100%;
+    height: 60%;
+    background: linear-gradient(to bottom, #637cf9 65%, transparent);
+  }
+  .hero__text {
+    max-width: 100%;
+    padding-bottom: 365px;
+  }
+  .hero__text p {
+    max-width: 100%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

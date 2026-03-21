@@ -1,0 +1,43 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+.header {
+  background-color: $surface;
+  padding: $spacing-none calc($spacing-xs + $spacing-xxxs);
+
+  & .container {
+    margin-top: $spacing-xs;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    width: 74px;
+  }
+
+  &__nav ul {
+    display: flex;
+    gap: calc($spacing-xxxl + $spacing-md);
+    font-size: $text-xs;
+  }
+
+  &__contact {
+    display: flex;
+    gap: $spacing-xs;
+
+    & span a {
+      font-weight: 700;
+      color: $primary;
+      font-size: $text-xs;
+    }
+
+    & button {
+      padding: $spacing-xs calc($spacing-lg + $spacing-xxl);
+    }
+  }
+
+  &__burger {
+    display: none;
+  }
+}

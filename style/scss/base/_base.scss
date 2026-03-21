@@ -1,0 +1,84 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/variables' as *;
+
+* {
+	-webkit-tap-highlight-color: transparent;
+}
+
+html {
+	scroll-behavior: smooth;
+	height: 100%;
+}
+
+body {
+	@include text;
+	font-size: $text-xxl;
+	background-color: $background;
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	overflow-x: hidden;
+}
+
+// Типографика
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	@include headline;
+}
+
+h1 {
+	font-size: $heading-1;
+}
+
+h2 {
+	font-size: $heading-2;
+}
+
+h3 {
+	font-size: $heading-3;
+}
+
+h4 {
+	font-size: $heading-4;
+}
+
+h5 {
+	font-size: $heading-5;
+}
+
+h6 {
+	font-size: $heading-6;
+}
+
+a {
+  color: $text-default;
+}
+
+input:focus::placeholder,
+textarea:focus::placeholder {
+	color: transparent;
+}
+
+input:focus::-webkit-input-placeholder,
+textarea:focus::-webkit-input-placeholder {
+	color: transparent;
+}
+
+input:focus::-moz-placeholder,
+textarea:focus::-moz-placeholder {
+	color: transparent;
+}
+
+input::placeholder,
+textarea::placeholder {
+	color: $text-default;
+}
+
+.container {
+  margin: $spacing-none auto;
+  max-width: 1440px;
+}

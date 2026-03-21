@@ -1,0 +1,13 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/variables' as *;
+
+.btn {
+  padding: $spacing-lg $spacing-xxxl;
+  background-color: $text-default;
+  border-radius: $radius-s;
+  color: $text-inverse;
+}
+
+.btn a {
+  color: $text-inverse;
+}

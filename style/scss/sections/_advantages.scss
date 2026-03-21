@@ -1,0 +1,70 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+.advantages {
+  background-color: $surface;
+  padding: calc($spacing-xxxl * 3) calc($spacing-xs + $spacing-xxxs)
+    $spacing-none;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $spacing-xxxl;
+    text-align: center;
+
+    .banner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: $spacing-xxxl;
+      border-radius: $radius-l;
+      background-color: $primary;
+      width: 100%;
+      padding: calc($spacing-xxxl + $spacing-xxl) calc($spacing-xxl * 2);
+
+      h3 {
+        color: $text-inverse;
+        max-width: 396px;
+      }
+
+      &__content {
+        display: flex;
+        gap: $spacing-xs;
+        width: 100%;
+
+        .block {
+          width: calc((100% - 20px) / 3);
+          background-color: $background;
+          border-radius: $radius-m;
+          padding: calc($spacing-md + $spacing-xxl) $spacing-xxl
+            calc($spacing-xxl + $spacing-xxxs);
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: calc($spacing-xxl + $spacing-xxxs);
+        }
+
+        .block__text {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: $spacing-sm;
+          text-align: left;
+        }
+      }
+    }
+    .btn {
+      padding: $spacing-lg calc($spacing-xl * 3 + $spacing-xxxxs);
+
+      a {
+        &::before {
+          content: url("../../../image/dot.svg");
+          width: 9px;
+          position: relative;
+          left: -($spacing-xs);
+        }
+      }
+    }
+  }
+}

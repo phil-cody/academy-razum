@@ -1,0 +1,233 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+// ===== SMALL DESKTOP
+@media (max-width: 1240px) {
+}
+// ===== BIG TABLET
+@media (max-width: 1024px) {
+  // ===== Header
+  .header {
+    &__nav ul {
+      gap: $spacing-md;
+    }
+
+    &__contact {
+      & button {
+        padding: $spacing-xxs calc($spacing-xxxs + $spacing-xxl);
+      }
+    }
+  }
+  // ===== Hero
+  .hero {
+    padding-top: $spacing-xl;
+
+    & .container {
+      border-radius: $radius-m;
+
+      &:before {
+        border-radius: $radius-m;
+        background: linear-gradient(to right, $primary 65%, transparent);
+      }
+    }
+
+    &__text {
+      gap: $spacing-md;
+      padding: calc($spacing-xxxl * 2 + $spacing-md) $spacing-xxl;
+      max-width: 568px;
+
+      h1 {
+        font-size: $heading-2;
+      }
+
+      p {
+        font-size: $text-lg;
+      }
+    }
+  }
+  // ===== Advantages
+  .advantages {
+    padding-top: calc($spacing-xxxl + $spacing-xxl);
+
+    .container {
+      gap: $spacing-md;
+
+      h2 {
+        font-size: $heading-4;
+      }
+
+      .banner {
+        gap: $spacing-md;
+        border-radius: $radius-m;
+        padding: calc($spacing-xxxl + $spacing-xs) calc($spacing-xxs * 2);
+
+        h3 {
+          font-size: $heading-6;
+          max-width: 100%;
+        }
+
+        &__content {
+
+          .block {
+            width: calc((100% - ($spacing-xs * 2)) / 3);
+            border-radius: $radius-xs;
+            padding: $spacing-xl $spacing-sm;
+            gap: $spacing-xxl;
+          }
+
+          .block__text {
+
+            h5 {
+              font-size: $heading-6;
+            }
+
+            p {
+              font-size: $text-lg;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// ===== TABLET
+@media (max-width: 887px) {
+}
+// ===== SMALL TABLET
+@media (max-width: 768px) {
+  // ===== Header
+  .header {
+    &__nav {
+      display: none;
+    }
+
+    &__contact {
+      display: none;
+    }
+
+    &__burger {
+      display: block;
+    }
+  }
+}
+// ===== MOBILE
+@media (max-width: 665px) {
+  // ===== Header
+  .header {
+  }
+  // ===== Hero
+  .hero {
+    &__text {
+      gap: $spacing-xl;
+      padding: $spacing-xxl $spacing-md;
+
+      h1 {
+        font-size: $heading-3;
+      }
+
+      p {
+        font-size: $text-sm;
+        max-width: 300px;
+      }
+    }
+  }
+  // ===== Advantages
+  .advantages {
+    padding-top: calc($spacing-xxxl + $spacing-xxl);
+
+    .container {
+      gap: $spacing-md;
+
+      h2 {
+        font-size: $heading-4;
+      }
+
+      .banner {
+        gap: $spacing-md;
+        border-radius: $radius-m;
+        padding: $spacing-xxxl $spacing-xl;
+
+        h3 {
+          font-size: $heading-6;
+          max-width: 100%;
+        }
+
+        &__content {
+          flex-direction: column;
+          gap: $spacing-xxxs;
+
+          .block {
+            width: 100%;
+            border-radius: $radius-xs;
+            padding: $spacing-xl $spacing-sm;
+            gap: $spacing-xl;
+          }
+
+          .block__text {
+            max-width: 90%;
+
+            h5 {
+              font-size: $heading-6;
+            }
+
+            p {
+              font-size: $text-md;
+            }
+          }
+        }
+      }
+
+      .btn {
+        padding: $spacing-md calc($spacing-xxl * 3);
+      }
+    }
+  }
+  // ===== BTN
+  .btn {
+    font-size: $text-md;
+  }
+}
+// ===== MOBILE
+@media (max-width: 540px) {
+}
+// ===== MOBILE
+@media (max-width: 430px) {
+  // ===== Header
+  .header {
+    margin-top: $spacing-xs;
+
+    & .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__logo {
+      width: 74px;
+    }
+  }
+  // ===== Hero
+  .hero {
+    padding-top: $spacing-xl;
+
+    & .container {
+      background-size: 135% auto;
+      background-position: bottom right;
+
+      &:before {
+        width: 100%;
+        height: 60%;
+        background: linear-gradient(to bottom, $primary 65%, transparent);
+      }
+    }
+
+    &__text {
+      max-width: 100%;
+      padding-bottom: calc($spacing-xxxl * 9 + $spacing-xxxs);
+
+      p {
+        max-width: 100%;
+      }
+    }
+  }
+}
