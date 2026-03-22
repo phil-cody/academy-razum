@@ -4,13 +4,13 @@
 	font-family: 'Manrope', sans-serif;
 	font-weight: 700;
 	line-height: 1.2;
-	letter-spacing: -0.06em;
+	letter-spacing: -0.06rem;
 	color: $text-default;
 }
 
 @mixin text {
 	font-family: 'Manrope', sans-serif;
 	font-weight: 400;
-	letter-spacing: -0.01em;
+	letter-spacing: -0.01rem;
 	color: $text-default;
 }
