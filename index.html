@@ -798,40 +798,42 @@
       <section class="faq">
         <div class="container">
           <h2>Ответы на вопросы, которые задают руководители</h2>
-          <div class="faq-block">
-            <div class="faq-text">
-              <h6>Нужен ли технический бэкграунд?</h6>
-              <p>Нужен ли технический бэкграунд?</p>
+          <div class="faq-content">
+            <div class="faq-block">
+              <div class="faq-text">
+                <h6>Нужен ли технический бэкграунд?</h6>
+                <p>Нужен ли технический бэкграунд?</p>
+              </div>
+              <div class="faq-open">
+                <img src="./image/icons/plus-icon.svg" alt="" />
+              </div>
             </div>
-            <div class="faq-open">
-              <img src="./image/icons/plus-icon.svg" alt="" />
+            <div class="faq-block">
+              <div class="faq-text">
+                <h6>Сколько времени нужно уделять?</h6>
+                <p></p>
+              </div>
+              <div class="faq-open">
+                <img src="./image/icons/plus-icon.svg" alt="" />
+              </div>
             </div>
-          </div>
-          <div class="faq-block">
-            <div class="faq-text">
-              <h6>Сколько времени нужно уделять?</h6>
-              <p></p>
+            <div class="faq-block">
+              <div class="faq-text">
+                <h6>Можно ли вернуть деньги?</h6>
+                <p></p>
+              </div>
+              <div class="faq-open">
+                <img src="./image/icons/plus-icon.svg" alt="" />
+              </div>
             </div>
-            <div class="faq-open">
-              <img src="./image/icons/plus-icon.svg" alt="" />
-            </div>
-          </div>
-          <div class="faq-block">
-            <div class="faq-text">
-              <h6>Можно ли вернуть деньги?</h6>
-              <p></p>
-            </div>
-            <div class="faq-open">
-              <img src="./image/icons/plus-icon.svg" alt="" />
-            </div>
-          </div>
-          <div class="faq-block">
-            <div class="faq-text">
-              <h6>Какие инструменты будем изучать?</h6>
-              <p></p>
-            </div>
-            <div class="faq-open">
-              <img src="./image/icons/plus-icon.svg" alt="" />
+            <div class="faq-block">
+              <div class="faq-text">
+                <h6>Какие инструменты будем изучать?</h6>
+                <p></p>
+              </div>
+              <div class="faq-open">
+                <img src="./image/icons/plus-icon.svg" alt="" />
+              </div>
             </div>
           </div>
         </div>
@@ -840,48 +842,46 @@
         <div class="container">
           <h2>Остались вопросы?</h2>
           <p>Оставьте заявку, и мы свяжемся с вами</p>
-          <form action="" class="form__request">
-            <div class="request__field">
-              <input
-                type="tel"
-                name="phone"
-                id="phone"
-                placeholder="Телефон"
-                class="request__input"
-                required
-              />
-            </div>
-            <div class="request__field">
-              <input
-                type="email"
-                name="email"
-                id="email"
-                placeholder="E-mail"
-                class="request__input"
-                required
-              />
-            </div>
-            <div class="request__field">
-              <input
-                type="text"
-                name="answer"
-                id="answer"
-                placeholder="Ваш вопрос"
-                class="request__input"
-                required
-              />
-            </div>
-            <button class="request__submit btn" type="submit">
-              Записаться на обучение
-            </button>
-          </form>
-          <div class="form__pd">
+          <div class="form__content">
+            <form action="" class="form__request">
+              <div class="request__field">
+                <input
+                  type="tel"
+                  name="phone"
+                  id="phone"
+                  placeholder="Телефон"
+                  class="request__input"
+                  required
+                />
+              </div>
+              <div class="request__field">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="E-mail"
+                  class="request__input"
+                  required
+                />
+              </div>
+              <div class="request__field">
+                <input
+                  type="text"
+                  name="answer"
+                  id="answer"
+                  placeholder="Ваш вопрос"
+                  class="request__input"
+                  required
+                />
+              </div>
+              <button class="request__submit btn" type="submit">
+                <span>Записаться на обучение</span>
+              </button>
+            </form>
             <div class="form__pd-text">
-              <p>
-                <span class="bold"
-                  >Согласие на обработку персональных данных</span
-                >
-              </p>
+              <h6>
+                Согласие на обработку персональных данных
+              </h6>
               <p>
                 Настоящим, субъект персональных данных (далее - Посетитель
                 Сайта), оставляя на сайте по веб-адресу ___ (далее — Сайт),
@@ -895,6 +895,7 @@
                 name="pd-checkbox"
                 id="pd-checkbox"
                 type="checkbox"
+                required
               />
               <label for="pd-checkbox"
                 >Нажимая на кнопку, я даю свое согласие на обработку моих
@@ -909,31 +910,26 @@
     <footer class="footer">
       <div class="container">
         <div class="footer-contact">
-          <div class="footer-contact__info">
-            <div class="footer-logo">
-              <img src="./image/logo.svg" alt="logo" />
-            </div>
-            <div class="footer-confid">
-              <a href="#">Политика конфиденциальности</a>
-              <a href="./personal-data.html"
-                >Согласие на обработку персональных данных</a
-              >
-            </div>
+          <div class="footer-logo">
+            <img src="./image/logo.svg" alt="logo" />
           </div>
-          <div class="footer-contact__address">
-            <div class="footer-phone">
-              <p>Вы всегда можете позвонить нам</p>
-              <h5><a href="tel:+74958016580">+7 (495) 801-65-80</a></h5>
-            </div>
-            <div class="footer-email">
-              <p>Почта:</p>
-              <h5>
-                <a href="mailto:ai@academyrazum.ru">ai@academyrazum.ru</a>
-              </h5>
-            </div>
+          <div class="footer-confid">
+            <a href="#">Политика конфиденциальности</a>
+            <a href="./personal-data.html"
+              >Согласие на обработку персональных данных</a
+            >
+          </div>
+          <div class="footer-phone">
+            <p>Вы всегда можете позвонить нам</p>
+            <h5><a href="tel:+74958016580">+7 (495) 801-65-80</a></h5>
+          </div>
+          <div class="footer-email">
+            <p>Почта:</p>
+            <h5>
+              <a href="mailto:ai@academyrazum.ru">ai@academyrazum.ru</a>
+            </h5>
           </div>
         </div>
-        <hr />
         <div class="footer-info">
           <div class="footer-info__block">
             <p>
@@ -950,17 +946,19 @@
               1-2, офис В005/10
             </p>
           </div>
-          <div class="footer-info__block">
-            <p>ОГРН: 1187746962721</p>
-            <p>Р/с: 40702810901500049177</p>
-            <p>ООО "Банк Точка"</p>
-            <p>К/с: 30101810745374525104</p>
+          <div class="footer-info__block middle">
+            <div class="footer-info__subblock">
+              <p>ОГРН: 1187746962721</p>
+              <p>Р/с: 40702810901500049177</p>
+              <p>ООО "Банк Точка"</p>
+              <p>К/с: 30101810745374525104</p>
+            </div>
+            <div class="footer-info__subblock">
+              <p>БИК: 044525104</p>
+              <p>Генеральный директор Д.М. Калиниченко</p>
+            </div>
           </div>
-          <div class="footer-info__block">
-            <p>БИК: 044525104</p>
-            <p>Генеральный директор Д.М. Калиниченко</p>
-          </div>
-          <div class="footer-info__block">
+          <div class="footer-info__block last">
             <p>"© Академия.РАЗУМ" Все права защищены.</p>
           </div>
         </div>
