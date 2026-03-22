@@ -12,7 +12,7 @@
   color: $text-inverse;
 
   &::before {
-    content: url("../../../image/dot.svg");
+    content: url("../../image/dot.svg");
     width: 9px;
     position: relative;
     left: -($spacing-xs);

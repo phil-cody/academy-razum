@@ -161,7 +161,7 @@ label {
 
 @font-face {
   font-family: "Manrope";
-  src: url("../../../fonts/Manrope-VariableFont_wght.ttf");
+  src: url("../../fonts/Manrope-VariableFont_wght.ttf");
 }
 .btn {
   padding: 22px 77px;
@@ -174,7 +174,7 @@ label {
   color: #fff;
 }
 .btn a::before {
-  content: url("../../../image/dot.svg");
+  content: url("../../image/dot.svg");
   width: 9px;
   position: relative;
   left: -10px;
@@ -222,7 +222,7 @@ label {
 .hero .container {
   border-radius: 50px;
   display: flex;
-  background-image: url("../../../image/backgrounds/hero-background.webp");
+  background-image: url("../../image/backgrounds/hero-background.webp");
   background-repeat: no-repeat;
   background-position: right;
   background-size: auto 100%;
