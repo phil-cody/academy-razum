@@ -34,6 +34,7 @@
 
     & button {
       padding: $spacing-xs calc($spacing-lg + $spacing-xxl);
+      color: $text-inverse;
     }
   }
 

@@ -97,7 +97,6 @@
       }
 
       .speakers__subtitle {
-
         p {
           font-size: $text-lg;
         }
@@ -109,6 +108,155 @@
             h5 {
               font-size: $heading-6;
             }
+          }
+        }
+      }
+    }
+  }
+  // ===== Programms
+  .programms {
+    padding: calc($spacing-xxxl + $spacing-xxl)
+      calc($spacing-xs + $spacing-xxxxs);
+
+    .container {
+      gap: $spacing-md;
+
+      h2 {
+        font-size: $heading-4;
+      }
+    }
+
+    &-description {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(2, 1fr);
+      gap: $spacing-md;
+
+      p {
+        font-size: $text-lg;
+      }
+    }
+
+    &-cards {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: calc($spacing-xs + $spacing-xxxxs);
+      row-gap: $spacing-md;
+    }
+  }
+  // ===== Results
+  .results {
+    padding: calc($spacing-xxxl + $spacing-xxl) $spacing-md
+      calc($spacing-xxl * 3);
+
+    .container {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto;
+    }
+    &-text {
+      align-items: center;
+      max-width: 100%;
+      gap: $spacing-md;
+
+      h2 {
+        font-size: $heading-4;
+      }
+    }
+    &-sticker {
+      font-size: $text-md;
+    }
+    &-content {
+      grid-column: 1;
+      grid-row: 2;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: $spacing-xl;
+      font-size: $text-lg;
+      max-width: 100%;
+    }
+    &-card {
+      padding: calc($spacing-xs + $spacing-xxs) calc($spacing-xl * 2)
+        calc($spacing-xs + $spacing-xxs) $spacing-xl;
+      gap: $spacing-xs;
+    }
+    button {
+      position: absolute;
+      justify-self: center;
+      max-width: 350px;
+      bottom: -32px;
+    }
+  }
+  // ===== Who
+  .who {
+    padding: calc($spacing-xxxl * 2.5) calc($spacing-xs + $spacing-xxxxs)
+      calc($spacing-xxxl + $spacing-xxl);
+
+    .container {
+      gap: $spacing-md;
+
+      h2 {
+        font-size: $heading-4;
+      }
+
+      p {
+        max-width: 340px;
+        font-size: $text-lg;
+      }
+    }
+    &-cards {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      column-gap: $spacing-xl;
+      row-gap: $spacing-md;
+    }
+  }
+  // ===== Reviews
+  .reviews {
+    padding: calc($spacing-xxxl + $spacing-xxl)
+      calc($spacing-xs + $spacing-xxxxs) calc($spacing-xxxl + $spacing-xxl)
+      $spacing-md;
+
+    .container {
+      gap: $spacing-md;
+
+      h2 {
+        font-size: $heading-4;
+      }
+
+      .slider {
+        margin-left: -$spacing-md;
+        padding-left: $spacing-md;
+      }
+    }
+  }
+  // ===== Reasons
+  .reasons {
+    padding-top: calc($spacing-xxxl + $spacing-xxl);
+    padding-bottom: calc($spacing-xxxl + $spacing-xxl);
+
+    .container {
+      gap: $spacing-md;
+
+      h2 {
+        font-size: $heading-4;
+      }
+
+      .banner {
+        gap: $spacing-sm;
+
+        .block {
+          padding: $spacing-xl;
+          padding-left: $spacing-sm;
+          gap: $spacing-xs;
+
+          img {
+            width: $spacing-lg;
+          }
+
+          h5,
+          li {
+            font-size: $text-lg;
+          }
+
+          ul {
+            padding-left: $spacing-lg;
           }
         }
       }
@@ -153,12 +301,43 @@
       }
     }
   }
+  // ===== Reviews
+  .reviews {
+    .container {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto;
+
+      .reviews-button {
+        grid-column: 1;
+        grid-row: 3;
+      }
+
+      .slider {
+        grid-column: 1;
+      }
+    }
+  }
+  // ===== Reasons
+  .reasons {
+    .container {
+      align-items: flex-start;
+
+      .banner {
+        flex-direction: column;
+        gap: $spacing-xxxs;
+        width: 100%;
+
+        .block {
+          h5 {
+            font-size: $heading-6;
+          }
+        }
+      }
+    }
+  }
 }
 // ===== SMALL TABLET
 @media (max-width: 665px) {
-  // ===== Header
-  .header {
-  }
   // ===== Hero
   .hero {
     &__text {
@@ -226,6 +405,49 @@
       }
     }
   }
+  // ===== Programms
+  .programms {
+    padding: calc($spacing-xxl * 2) calc($spacing-xs + $spacing-xxxxs);
+
+    &-cards {
+      grid-template-columns: 1fr;
+      row-gap: $spacing-xs;
+    }
+  }
+  // ===== Results
+  .results {
+    padding: calc($spacing-xxl * 2) calc($spacing-xs + $spacing-xxxxs);
+
+    .container {
+      grid-template-rows: auto auto auto;
+    }
+    &-text {
+      text-align: center;
+    }
+    &-sticker {
+    }
+    &-content {
+      grid-template-columns: 1fr;
+      justify-self: stretch;
+    }
+    &-card {
+    }
+    button {
+      grid-row: 3;
+      position: relative;
+      bottom: 0;
+    }
+  }
+  // ===== Who
+  .who {
+    padding: calc($spacing-xxl * 2) calc($spacing-xs + $spacing-xxxxs);
+
+    &-cards {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(4, 1fr);
+      row-gap: $spacing-xs;
+    }
+  }
   // ===== btn
   .btn {
     font-size: $text-md;
@@ -235,7 +457,6 @@
 @media (max-width: 430px) {
   // ===== Header
   .header {
-
     & .container {
       display: flex;
       justify-content: space-between;
@@ -275,13 +496,11 @@
     padding: calc($spacing-xxl * 2) calc($spacing-xs + $spacing-xxxxs);
 
     .container {
-
       h2 {
         max-width: 296px;
       }
 
       .speakers__subtitle {
-
         p {
           font-size: $text-md;
         }
@@ -291,7 +510,8 @@
         gap: $spacing-xxxs;
         height: 16px;
 
-        &-prev, &-next {
+        &-prev,
+        &-next {
           border-radius: $radius-xs;
           padding: $spacing-xxs $spacing-md;
 
@@ -302,11 +522,8 @@
       }
 
       .slider {
-
         &-card {
-
           &__review {
-
             p {
               font-size: $text-xxs;
             }
@@ -317,10 +534,108 @@
           }
 
           &__text {
-
             p {
               font-size: $text-sm;
             }
+          }
+        }
+      }
+    }
+  }
+  // ===== Programms
+  .programms {
+  }
+  // ===== Results
+  .results {
+    &-text {
+      align-items: start;
+      text-align: left;
+    }
+    &-sticker {
+      p {
+        font-size: $text-xs;
+      }
+    }
+    &-content {
+      font-size: $text-md;
+    }
+    &-card {
+      padding: calc($spacing-xs + $spacing-xxs)
+        calc($spacing-sm - $spacing-xxxxs) calc($spacing-xs + $spacing-xxs)
+        $spacing-sm;
+    }
+    button {
+      max-width: 100%;
+      width: 100%;
+
+      a {
+        font-size: $text-md;
+      }
+    }
+  }
+  // ===== Who
+  .who {
+    .container {
+      p {
+        font-size: $text-md;
+      }
+    }
+    &-card {
+      &__content {
+        p {
+          font-size: $text-sm;
+        }
+      }
+    }
+  }
+  // ===== Reviews
+  .reviews {
+    padding: calc($spacing-xxl * 2) calc($spacing-xs + $spacing-xxxxs);
+
+    .container {
+      h2 {
+        max-width: 300px;
+      }
+
+      .reviews-button {
+        gap: $spacing-xxxs;
+        height: 16px;
+
+        &__prev,
+        &__next {
+          border-radius: $radius-xs;
+          padding: $spacing-xxs $spacing-md;
+
+          img {
+            width: 31px;
+          }
+        }
+      }
+
+      .slider {
+        margin-left: -(calc($spacing-xs + $spacing-xxxxs));
+        padding-left: calc($spacing-xs + $spacing-xxxxs);
+        gap: $spacing-xs;
+      }
+    }
+  }
+  // ===== Reasons
+  .reasons {
+    padding-top: calc($spacing-xxl * 2);
+    padding-bottom: calc($spacing-xxl * 2);
+
+    .container {
+
+      .banner {
+        .block {
+          padding: $spacing-xl $spacing-md;
+
+          li {
+            font-size: $text-md;
+          }
+
+          img {
+            width: $spacing-xl
           }
         }
       }

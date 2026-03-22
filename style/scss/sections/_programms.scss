@@ -1,0 +1,72 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+.programms {
+  background-color: $background;
+  padding: calc($spacing-xxxl * 2.5) calc($spacing-xxxl + $spacing-xxl)
+    calc($spacing-xxl * 2);
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-xxl;
+
+    h2 {
+      max-width: 680px;
+    }
+  }
+
+  &-description {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: calc($spacing-xxxl * 2.5);
+  }
+
+  &-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    column-gap: $spacing-xs;
+    row-gap: $spacing-xxl;
+
+    .programms-card {
+      background-color: $surface;
+      border-radius: $radius-m;
+      padding: $spacing-xl;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: $spacing-sm;
+
+      h5 {
+        color: $primary;
+        letter-spacing: -0.04em;
+      }
+
+      p {
+        font-size: $text-md;
+      }
+
+      &__top {
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-sm;
+      }
+
+      &__bottom {
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-sm;
+      }
+
+      &__date {
+        background-color: $background;
+        padding: $spacing-xxxxs $spacing-sm;
+        font-size: $text-sm;
+        font-weight: 700;
+        width: fit-content;
+        border-radius: $radius-xs;
+      }
+    }
+  }
+}

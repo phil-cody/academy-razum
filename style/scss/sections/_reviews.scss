@@ -1,0 +1,76 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+.reviews {
+  background-color: $background;
+  padding: calc($spacing-xxxl * 2.5) calc($spacing-xs + $spacing-xxxxs) calc($spacing-xxxl * 2.5) calc($spacing-xxxl + $spacing-xxl);
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 228px;
+    grid-template-rows: auto auto;
+    row-gap: $spacing-xxl;
+
+    .reviews-button {
+      display: flex;
+      gap: $spacing-xxs;
+      width: fit-content;
+      grid-column: 2;
+      grid-row: 1;
+      align-self: center;
+      height: 26px;
+
+      &__prev,
+      &__next {
+        display: flex;
+        align-items: center;
+        background-color: $primary;
+        border-radius: $spacing-xl;
+        padding: $spacing-xxs $spacing-xxl;
+      }
+      &__next img {
+        transform: rotate(180deg);
+      }
+    }
+    .slider {
+      grid-column: 1 / 3;
+      grid-row: 2;
+      display: flex;
+      gap: $spacing-xl;
+      overflow-x: scroll;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      margin-right: -(calc($spacing-xs + $spacing-xxxxs));
+      margin-left: -(calc($spacing-xxxl + $spacing-xxl));
+      padding-right: calc($spacing-xs + $spacing-xxxxs);
+      padding-left: calc($spacing-xxxl + $spacing-xxl);
+
+      ::-webkit-scrollbar {
+        display: none;
+      }
+
+      &-card {
+        min-width: 273px;
+        width: 273px;
+        background-color: $surface;
+        border-radius: $radius-m;
+        padding: $spacing-md;
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-xs;
+
+        img {
+          width: 83px;
+        }
+
+        p span {
+          font-size: $text-xs;
+        }
+
+        p {
+          font-size: $text-md;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,67 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+.results {
+  background-color: $primary;
+  padding: calc($spacing-xxxl * 3 + $spacing-sm)
+    calc($spacing-xxxl + $spacing-xxl) calc($spacing-xxxl * 2.5);
+  position: relative;
+
+  .container {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    grid-template-rows: auto auto auto;
+    column-gap: calc($spacing-xxxl * 2.5);
+    row-gap: $spacing-xxl;
+  }
+  &-text {
+    grid-column: 1;
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-xxl;
+    max-width: 350px;
+    color: $primary;
+
+    h2 {
+      color: $text-inverse;
+      letter-spacing: -0.04em;
+    }
+  }
+  &-sticker {
+    padding: $spacing-xxxs $spacing-sm;
+    background-color: $background;
+    border-radius: $radius-m;
+    width: fit-content;
+    font-size: $text-lg;
+  }
+  &-content {
+    grid-column: 2;
+    grid-row: 1 / 4;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    row-gap: $spacing-xxxs;
+    max-width: 610px;
+    justify-self: end;
+  }
+  &-card {
+    background-color: $background;
+    padding: calc($spacing-xxl + $spacing-xxxs)
+      calc($spacing-xxxl + $spacing-sm) calc($spacing-xxl + $spacing-xxxs)
+      $spacing-xl;
+    border-radius: $radius-m;
+    display: flex;
+    gap: $spacing-sm;
+    align-items: center;
+
+    img {
+      width: 25px;
+    }
+  }
+  button {
+    grid-row: 2;
+    grid-column: 1;
+    font-size: $text-xl;
+  }
+}

@@ -54,17 +54,9 @@
         }
       }
     }
-    .btn {
-      padding: $spacing-lg calc($spacing-xl * 3 + $spacing-xxxxs);
 
-      a {
-        &::before {
-          content: url("../../../image/dot.svg");
-          width: 9px;
-          position: relative;
-          left: -($spacing-xs);
-        }
-      }
+    button {
+      font-size: $text-xl;
     }
   }
 }
