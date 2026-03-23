@@ -109,11 +109,11 @@
           gap: calc(($spacing-xxxs + $spacing-xxxxs) / 2);
           width: fit-content;
 
-          .star {
-            width: calc($spacing-xxxxs + $spacing-xxxs);
+          svg {
+            color: $gold;
           }
-
           .empty {
+            color: $text-low;
             display: none;
           }
         }

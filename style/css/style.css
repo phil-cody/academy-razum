@@ -447,10 +447,11 @@ label {
   gap: 3.5px;
   width: fit-content;
 }
-.speakers .container .slider-card__stars .star {
-  width: 7px;
+.speakers .container .slider-card__stars svg {
+  color: #f2b855;
 }
 .speakers .container .slider-card__stars .empty {
+  color: #9da1a8;
   display: none;
 }
 .speakers .container .slider-card__content {
@@ -707,10 +708,11 @@ label {
   gap: 5px;
   width: fit-content;
 }
-.reviews .container .slider-card__stars .star {
-  width: 12px;
+.reviews .container .slider-card__stars svg {
+  color: #f2b855;
 }
 .reviews .container .slider-card__stars .empty {
+  color: #9da1a8;
   display: none;
 }
 .reviews .container .slider-card p span {

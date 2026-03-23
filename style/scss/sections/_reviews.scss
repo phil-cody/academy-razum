@@ -64,11 +64,11 @@
           gap: $spacing-xxxs;
           width: fit-content;
 
-          .star {
-            width: calc($spacing-xs + $spacing-xxxxs);
+          svg {
+            color: $gold;
           }
-
           .empty {
+            color: $text-low;
             display: none;
           }
         }
