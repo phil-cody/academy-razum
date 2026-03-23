@@ -12,9 +12,12 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  display: none;
+  display: flex;
   flex-direction: column;
   z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease;
 
   .popup__header {
     display: grid;
@@ -31,11 +34,12 @@
     .slider-card__close-popup {
       grid-column: 4;
       align-self: flex-start;
+      cursor: pointer;
     }
   }
   .popup__content {
     margin-top: $spacing-md;
-    
+
     ul {
       display: flex;
       flex-direction: column;
@@ -56,5 +60,6 @@
 }
 
 .popup-active {
-  display: block;
+  visibility: visible;
+  opacity: 1;
 }

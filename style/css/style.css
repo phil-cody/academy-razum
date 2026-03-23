@@ -446,6 +446,7 @@ label {
   font-weight: 700;
   text-decoration: underline;
   color: #637cf9;
+  width: fit-content;
 }
 
 .speakers__overlay {
@@ -474,9 +475,12 @@ label {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  display: none;
+  display: flex;
   flex-direction: column;
   z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease;
 }
 .speakers__popup-card .popup__header {
   display: grid;
@@ -492,6 +496,7 @@ label {
 .speakers__popup-card .popup__header .slider-card__close-popup {
   grid-column: 4;
   align-self: flex-start;
+  cursor: pointer;
 }
 .speakers__popup-card .popup__content {
   margin-top: 20px;
@@ -512,7 +517,8 @@ label {
 }
 
 .popup-active {
-  display: block;
+  visibility: visible;
+  opacity: 1;
 }
 
 .programms {
@@ -1399,7 +1405,7 @@ label {
   }
   .speakers__popup-card {
     min-width: 273px;
-    width: fit-content;
+    width: 90%;
   }
   .speakers__popup-card .popup__header h5 {
     font-size: 16px;
