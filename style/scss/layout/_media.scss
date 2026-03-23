@@ -525,6 +525,22 @@
       }
     }
   }
+  // ===== Speakers Pop-Up
+  .speakers__popup-card {
+    min-width: 273px;
+    width: fit-content;
+
+    .popup__header {
+      h5 {
+        font-size: $text-lg;
+      }
+    }
+    .popup__content {
+      li {
+        font-size: $text-sm;
+      }
+    }
+  }
   // ===== Programms
   .programms {
     padding: calc($spacing-xxl * 2) calc($spacing-xs + $spacing-xxxxs);

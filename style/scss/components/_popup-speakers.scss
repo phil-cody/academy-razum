@@ -7,18 +7,19 @@
   padding: $spacing-xl $spacing-sm;
   min-width: 632px;
   width: 632px;
+  height: fit-content;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: none;
   flex-direction: column;
-  gap: $spacing-md;
+  z-index: 1000;
 
   .popup__header {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto auto 1fr auto;
     gap: $spacing-sm;
-    justify-content: flex-start;
     align-items: center;
 
     &-avatar {
@@ -28,14 +29,32 @@
     }
 
     .slider-card__close-popup {
+      grid-column: 4;
       align-self: flex-start;
-      justify-self: flex-end;
     }
   }
   .popup__content {
+    margin-top: $spacing-md;
+    
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: $spacing-xs;
+      padding-left: $spacing-md;
+
+      li {
+        list-style-type: disc;
+        list-style-position: outside;
+        font-weight: 200;
+
+        &::marker {
+          color: $primary;
+        }
+      }
+    }
   }
 }
 
 .popup-active {
-  display: flex;
+  display: block;
 }

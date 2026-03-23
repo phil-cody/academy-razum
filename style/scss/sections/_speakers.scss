@@ -3,7 +3,7 @@
 
 .speakers {
   background-color: $surface;
-  padding: calc($spacing-xxxl * 3) calc($spacing-xs + $spacing-xxxxs);
+  padding: 0 calc($spacing-xs + $spacing-xxxxs) calc($spacing-xxxl * 3);
   position: relative;
 
   .container {
@@ -145,4 +145,19 @@
       }
     }
   }
+}
+
+.speakers__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 999;
+  display: none;
+}
+
+.popup-active {
+  display: block;
 }
