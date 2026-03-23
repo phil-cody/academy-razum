@@ -39,6 +39,9 @@
   }
   .popup__content {
     margin-top: $spacing-md;
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-xs;
 
     ul {
       display: flex;

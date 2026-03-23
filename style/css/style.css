@@ -500,6 +500,9 @@ label {
 }
 .speakers__popup-card .popup__content {
   margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 .speakers__popup-card .popup__content ul {
   display: flex;
@@ -1409,6 +1412,9 @@ label {
   }
   .speakers__popup-card .popup__header h5 {
     font-size: 16px;
+  }
+  .speakers__popup-card .popup__content h6 {
+    font-size: 12px;
   }
   .speakers__popup-card .popup__content li {
     font-size: 12px;

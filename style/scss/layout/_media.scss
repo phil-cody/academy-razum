@@ -536,6 +536,9 @@
       }
     }
     .popup__content {
+      h6 {
+        font-size: $text-sm;
+      }
       li {
         font-size: $text-sm;
       }
