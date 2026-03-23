@@ -452,7 +452,6 @@ label {
 }
 .speakers .container .slider-card__stars .empty {
   color: #9da1a8;
-  display: none;
 }
 .speakers .container .slider-card__content {
   padding-left: 10px;
@@ -713,7 +712,6 @@ label {
 }
 .reviews .container .slider-card__stars .empty {
   color: #9da1a8;
-  display: none;
 }
 .reviews .container .slider-card p span {
   font-size: 10px;
