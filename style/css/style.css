@@ -65,6 +65,7 @@ input {
   border: none;
   outline: none;
   box-shadow: none;
+  font-size: 20px;
 }
 
 input:focus::placeholder,
@@ -187,6 +188,39 @@ label {
   width: 9px;
   position: relative;
   left: -10px;
+}
+
+.speakers__popup-card {
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 25px 15px;
+  min-width: 632px;
+  width: 632px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  flex-direction: column;
+  gap: 20px;
+}
+.speakers__popup-card .popup__header {
+  display: flex;
+  gap: 15px;
+  justify-content: flex-start;
+  align-items: center;
+}
+.speakers__popup-card .popup__header-avatar {
+  width: 48px;
+  aspect-ratio: 1/1;
+  border-radius: 25px;
+}
+.speakers__popup-card .popup__header .slider-card__close-popup {
+  align-self: flex-start;
+  justify-self: flex-end;
+}
+.popup-active {
+  display: flex;
 }
 
 .header {
@@ -317,6 +351,7 @@ label {
 .speakers {
   background-color: #f1f1f1;
   padding: 120px 12px;
+  position: relative;
 }
 .speakers .container {
   display: grid;
@@ -407,8 +442,16 @@ label {
   border-radius: 10px;
   padding: 10px 6px 10px 13px;
 }
-.speakers .container .slider-card__rate img {
-  width: 49px;
+.speakers .container .slider-card__stars {
+  display: flex;
+  gap: 3.5px;
+  width: fit-content;
+}
+.speakers .container .slider-card__stars .star {
+  width: 7px;
+}
+.speakers .container .slider-card__stars .empty {
+  display: none;
 }
 .speakers .container .slider-card__content {
   padding-left: 10px;
@@ -659,8 +702,16 @@ label {
   flex-direction: column;
   gap: 10px;
 }
-.reviews .container .slider-card img {
-  width: 83px;
+.reviews .container .slider-card__stars {
+  display: flex;
+  gap: 5px;
+  width: fit-content;
+}
+.reviews .container .slider-card__stars .star {
+  width: 12px;
+}
+.reviews .container .slider-card__stars .empty {
+  display: none;
 }
 .reviews .container .slider-card p span {
   font-size: 10px;
@@ -917,6 +968,9 @@ label {
 }
 
 @media (max-width: 1024px) {
+  input {
+    font-size: 16px;
+  }
   .header__nav ul {
     gap: 20px;
   }

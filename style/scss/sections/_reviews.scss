@@ -59,8 +59,18 @@
         flex-direction: column;
         gap: $spacing-xs;
 
-        img {
-          width: 83px;
+        &__stars {
+          display: flex;
+          gap: $spacing-xxxs;
+          width: fit-content;
+
+          .star {
+            width: calc($spacing-xs + $spacing-xxxxs);
+          }
+
+          .empty {
+            display: none;
+          }
         }
 
         p span {

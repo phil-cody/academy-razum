@@ -4,6 +4,7 @@
 .speakers {
   background-color: $surface;
   padding: calc($spacing-xxxl * 3) calc($spacing-xs + $spacing-xxxxs);
+  position: relative;
 
   .container {
     display: grid;
@@ -102,9 +103,18 @@
           border-radius: $radius-xs;
           padding: $spacing-xs calc($spacing-xxxxs * 3) $spacing-xs
             calc($spacing-sm - $spacing-xxxxs);
+        }
+        &__stars {
+          display: flex;
+          gap: calc(($spacing-xxxs + $spacing-xxxxs) / 2);
+          width: fit-content;
 
-          img {
-            width: 49px;
+          .star {
+            width: calc($spacing-xxxxs + $spacing-xxxs);
+          }
+
+          .empty {
+            display: none;
           }
         }
         &__content {

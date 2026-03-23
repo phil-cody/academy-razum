@@ -3,6 +3,9 @@
 
 // ===== LARGE TABLET
 @media (max-width: 1024px) {
+  input {
+    font-size: $text-lg;
+  }
   // ===== Header
   .header {
     &__nav ul {

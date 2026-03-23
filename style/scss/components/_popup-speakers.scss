@@ -1,0 +1,41 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+.speakers__popup-card {
+  background-color: $background;
+  border-radius: $radius-m;
+  padding: $spacing-xl $spacing-sm;
+  min-width: 632px;
+  width: 632px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  flex-direction: column;
+  gap: $spacing-md;
+
+  .popup__header {
+    display: flex;
+    gap: $spacing-sm;
+    justify-content: flex-start;
+    align-items: center;
+
+    &-avatar {
+      width: calc(($spacing-lg + $spacing-xxxxs) * 2);
+      aspect-ratio: 1 / 1;
+      border-radius: $spacing-xl;
+    }
+
+    .slider-card__close-popup {
+      align-self: flex-start;
+      justify-self: flex-end;
+    }
+  }
+  .popup__content {
+  }
+}
+
+.popup-active {
+  display: flex;
+}
