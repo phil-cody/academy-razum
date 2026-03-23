@@ -173,17 +173,21 @@ label {
   src: url("../../fonts/Manrope-VariableFont_wght.ttf");
 }
 .btn {
-  padding: 22px 77px;
+  padding: 0;
   background-color: #120e1d;
   border-radius: 15px;
-  font-size: 14px;
-  white-space: nowrap;
 }
 
-.btn a {
+.btn a, .btn span {
+  width: 100%;
+  height: 100%;
   color: #fff;
+  padding: 22px 77px;
+  font-size: 14px;
+  white-space: nowrap;
+  display: block;
 }
-.btn a::before {
+.btn a::before, .btn span::before {
   content: url("../../image/dot.svg");
   width: 9px;
   position: relative;

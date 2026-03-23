@@ -2,15 +2,19 @@
 @use "../abstracts/variables" as *;
 
 .btn {
-  padding: $spacing-lg calc($spacing-xl * 3 + $spacing-xxxxs);
+  padding: 0;
   background-color: $text-default;
   border-radius: $radius-s;
-  font-size: $text-md;
-  white-space: nowrap;
 }
 
-.btn a {
+.btn a, .btn span {
+  width: 100%;
+  height: 100%;
   color: $text-inverse;
+  padding: $spacing-lg calc($spacing-xl * 3 + $spacing-xxxxs);
+  font-size: $text-md;
+  white-space: nowrap;
+  display: block;
 
   &::before {
     content: url("../../image/dot.svg");
