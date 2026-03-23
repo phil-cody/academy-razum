@@ -43,6 +43,7 @@
         align-items: center;
         background-color: $primary;
         border-radius: $spacing-xl;
+        border: none;
         padding: $spacing-xxs $spacing-xxl;
       }
       &-next img {
@@ -90,7 +91,7 @@
         &__rate {
           position: absolute;
           width: 169px;
-          height: 72px;
+          height: fit-content;
           display: flex;
           flex-direction: column;
           justify-content: center;
@@ -99,7 +100,7 @@
           right: $text-md;
           background-color: $background;
           border-radius: $radius-xs;
-          padding: $spacing-none calc($spacing-xxxxs * 3) $spacing-none
+          padding: $spacing-xs calc($spacing-xxxxs * 3) $spacing-xs
             calc($spacing-sm - $spacing-xxxxs);
 
           img {

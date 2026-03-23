@@ -61,6 +61,12 @@ a {
   color: #120e1d;
 }
 
+input {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
 input:focus::placeholder,
 textarea:focus::placeholder {
   color: transparent;
@@ -78,7 +84,7 @@ textarea:focus::-moz-placeholder {
 
 input::placeholder,
 textarea::placeholder {
-  color: #120e1d;
+  color: #9da1a8;
 }
 
 .container {
@@ -94,6 +100,7 @@ span.bold {
 * {
   padding: 0px;
   margin: 0px;
+  box-sizing: border-box;
   border: none;
 }
 
@@ -101,6 +108,7 @@ span.bold {
 *::before,
 *::after {
   box-sizing: border-box;
+  border: none;
 }
 
 /* Links */
@@ -168,6 +176,7 @@ label {
   background-color: #120e1d;
   border-radius: 15px;
   font-size: 14px;
+  white-space: nowrap;
 }
 
 .btn a {
@@ -343,6 +352,7 @@ label {
   align-items: center;
   background-color: #637cf9;
   border-radius: 25px;
+  border: none;
   padding: 8px 30px;
 }
 .speakers .container .speakers__button-next img {
@@ -386,7 +396,7 @@ label {
 .speakers .container .slider-card__rate {
   position: absolute;
   width: 169px;
-  height: 72px;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -395,7 +405,7 @@ label {
   right: 14px;
   background-color: #fff;
   border-radius: 10px;
-  padding: 0 6px 0 13px;
+  padding: 10px 6px 10px 13px;
 }
 .speakers .container .slider-card__rate img {
   width: 49px;
@@ -540,6 +550,7 @@ label {
   grid-row: 2;
   grid-column: 1;
   font-size: 18px;
+  height: fit-content;
 }
 
 .who {
@@ -758,7 +769,7 @@ label {
   padding: 70px 12px 60px 12px;
 }
 .form .container {
-  background-image: url("../../../image/backgrounds/form-background.png");
+  background-image: url("../../image/backgrounds/form-background.png");
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center;
@@ -804,7 +815,6 @@ label {
   height: 100%;
 }
 .form .request__input::placeholder {
-  color: #9da1a8;
   font-size: 14px;
 }
 .form .request__submit {
@@ -1033,7 +1043,9 @@ label {
   }
   .results button {
     position: absolute;
-    justify-self: center;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     max-width: 350px;
     bottom: -32px;
   }
@@ -1309,7 +1321,11 @@ label {
   .results button {
     grid-row: 3;
     position: relative;
+    transform: none;
+    top: 0;
+    left: 0;
     bottom: 0;
+    justify-self: center;
   }
   .who {
     padding: 60px 12px;
@@ -1364,6 +1380,7 @@ label {
   }
   .btn {
     font-size: 14px;
+    padding: 20px 55px;
   }
 }
 @media (max-width: 430px) {

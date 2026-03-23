@@ -178,7 +178,9 @@
     }
     button {
       position: absolute;
-      justify-self: center;
+      top: 100%; 
+      left: 50%;
+      transform: translate(-50%, -50%);
       max-width: 350px;
       bottom: -32px;
     }
@@ -542,7 +544,11 @@
     button {
       grid-row: 3;
       position: relative;
+      transform: none;
+      top: 0;
+      left: 0;
       bottom: 0;
+      justify-self: center;
     }
   }
   // ===== Who
@@ -609,6 +615,7 @@
   // ===== btn
   .btn {
     font-size: $text-md;
+    padding: $spacing-md calc($spacing-xxl + $spacing-xl);
   }
 }
 // ===== MOBILE
