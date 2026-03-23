@@ -1,6 +1,16 @@
 @use "../abstracts/mixins" as *;
 @use "../abstracts/variables" as *;
-
+// ===== SMALL DESKTOP
+// ===== programms
+@media (max-width: 1280px) {
+  .programms {
+    &-cards {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: calc($spacing-xs + $spacing-xxxxs);
+      row-gap: $spacing-md;
+    }
+  }
+}
 // ===== LARGE TABLET
 @media (max-width: 1024px) {
   input {
@@ -138,12 +148,6 @@
         font-size: $text-lg;
       }
     }
-
-    &-cards {
-      grid-template-columns: repeat(2, 1fr);
-      column-gap: calc($spacing-xs + $spacing-xxxxs);
-      row-gap: $spacing-md;
-    }
   }
   // ===== Results
   .results {
@@ -181,7 +185,7 @@
     }
     button {
       position: absolute;
-      top: 100%; 
+      top: 100%;
       left: 50%;
       transform: translate(-50%, -50%);
       max-width: 350px;
@@ -298,7 +302,8 @@
         font-size: $text-lg;
       }
     }
-    .form__pd-text, .form__pd-agree {
+    .form__pd-text,
+    .form__pd-agree {
       p {
         font-size: $text-xs;
       }
@@ -437,7 +442,8 @@
       grid-column: 2;
       grid-row: 2;
     }
-    .footer-phone, .footer-email {
+    .footer-phone,
+    .footer-email {
       justify-self: start;
       p {
         font-size: $text-sm;
@@ -446,6 +452,12 @@
         font-size: $heading-5;
       }
     }
+  }
+  // ===== btn
+  .btn a,
+  .btn span {
+    font-size: $text-md;
+    padding: $spacing-md calc($spacing-xxl + $spacing-xl);
   }
 }
 // ===== SMALL TABLET
@@ -511,10 +523,6 @@
           }
         }
       }
-
-      .btn {
-        padding: $spacing-md calc($spacing-xxl * 3);
-      }
     }
   }
   // ===== Programms
@@ -573,9 +581,6 @@
       min-width: 300px;
       width: 100%;
     }
-    .request__submit {
-      padding: $spacing-md calc($spacing-xxl * 2);
-    }
   }
   // Footer
   .footer {
@@ -595,7 +600,8 @@
       grid-column: 1;
       grid-row: 3;
     }
-    .footer-phone, .footer-email {
+    .footer-phone,
+    .footer-email {
       justify-self: start;
     }
     .footer-info {
@@ -614,11 +620,6 @@
         grid-row: 3;
       }
     }
-  }
-  // ===== btn
-  .btn {
-    font-size: $text-md;
-    padding: $spacing-md calc($spacing-xxl + $spacing-xl);
   }
 }
 // ===== MOBILE
@@ -790,7 +791,6 @@
     padding-bottom: calc($spacing-xxl * 2);
 
     .container {
-
       .banner {
         .block {
           padding: $spacing-xl $spacing-md;
@@ -800,7 +800,7 @@
           }
 
           img {
-            width: $spacing-xl
+            width: $spacing-xl;
           }
         }
       }
@@ -833,7 +833,8 @@
         font-size: $text-md;
       }
     }
-    .form__pd-text, .form__pd-agree {
+    .form__pd-text,
+    .form__pd-agree {
       p {
         font-size: $text-xs;
       }
