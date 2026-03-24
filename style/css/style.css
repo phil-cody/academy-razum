@@ -1491,17 +1491,22 @@ label {
     padding: 20px 55px;
   }
 }
-@media (max-width: 665px) {
-  .header__form-modal {
-    gap: 20px;
-    padding: 50px 0;
-  }
+@media (max-width: 668px) {
   .header__form-modal h2 {
     font-size: 30px;
   }
   .header__form-modal p {
-    max-width: 293px;
     font-size: 14px;
+  }
+  .header__form--pd-text p {
+    font-size: 10px;
+  }
+  .header__form-modal {
+    gap: 20px;
+    padding: 50px 0;
+  }
+  .header__form-modal p {
+    max-width: 293px;
   }
   .header__form--content {
     min-width: 300px;
@@ -1509,7 +1514,6 @@ label {
   }
   .header__form--pd-text p {
     max-width: 100%;
-    font-size: 10px;
   }
   .hero__text {
     gap: 25px;
@@ -1792,6 +1796,27 @@ label {
   .form .form__pd-text p,
   .form .form__pd-agree p {
     font-size: 10px;
+  }
+}
+@media (max-height: 930px) {
+  .header__form-modal {
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+}
+@media (max-height: 750px) {
+  .header__form-modal {
+    transform: translate(-50%, -50%) scale(0.6);
+  }
+  .speakers__popup-card {
+    transform: translate(-50%, -50%) scale(0.7);
+  }
+}
+@media (max-height: 460px) {
+  .header__form-modal {
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+  .speakers__popup-card {
+    transform: translate(-50%, -50%) scale(0.6);
   }
 }
 
