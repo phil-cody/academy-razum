@@ -28,6 +28,11 @@
       }
     }
   }
+  // ===== Header Form Modal
+  .header__form-modal {
+    min-width: 90%;
+    width: 90%;
+  }
   // ===== Hero
   .hero {
     padding-top: $spacing-xl;
@@ -462,6 +467,30 @@
 }
 // ===== SMALL TABLET
 @media (max-width: 665px) {
+  // ===== Header Form Modal
+  .header__form-modal {
+    gap: $spacing-md;
+    padding: calc($spacing-xl * 2) 0;
+
+    h2 {
+      font-size: $heading-4;
+    }
+
+    p {
+      max-width: 293px;
+      font-size: $text-md;
+    }
+  }
+  .header__form--content {
+    min-width: 300px;
+    width: 85%;
+  }
+  .header__form--pd-text {
+    p {
+      max-width: 100%;
+      font-size: $text-xs;
+    }
+  }
   // ===== Hero
   .hero {
     &__text {

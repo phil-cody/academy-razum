@@ -28,6 +28,92 @@
         <button class="header__burger">
           <img src="./image/burger.svg" alt="burger button" />
         </button>
+        <div class="header__form-modal header__modal-active">
+          <img src="./image/icons/close-white.svg" alt="" class="header__modal-close">
+          <h2>Готовы начать?</h2>
+          <p>Оставьте заявку, и мы свяжемся с вами для подбора оптимальной программы, соответствующую вашим лидерским целям</p>
+          <div class="header__form--content">
+            <form action="" class="header__form--request">
+              <div class="header__request--field">
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="Имя"
+                  class="header__request--input"
+                  required
+                />
+              </div>
+              <div class="header__request--field">
+                <input
+                  type="tel"
+                  name="header-phone"
+                  id="header-phone"
+                  placeholder="Телефон"
+                  class="header__request--input"
+                  required
+                />
+              </div>
+              <div class="header__request--field">
+                <input
+                  type="email"
+                  name="header-email"
+                  id="header-email"
+                  placeholder="E-mail"
+                  class="header__request--input"
+                  required
+                />
+              </div>
+              <div class="header__request--field">
+                <input
+                  type="text"
+                  name="count"
+                  id="count"
+                  placeholder="Количество учеников"
+                  class="header__request--input"
+                  required
+                />
+              </div>
+              <div class="header__request--field">
+                <input
+                  type="text"
+                  name="company"
+                  id="company"
+                  placeholder="Компания"
+                  class="header__request--input"
+                  required
+                />
+              </div>
+              <button class="header__request--submit btn" type="submit">
+                <span>Записаться на обучение</span>
+              </button>
+            </form>
+            <div class="header__form--pd-text">
+              <h6>Согласие на обработку персональных данных</h6>
+              <p>
+                Настоящим, субъект персональных данных (далее - Посетитель
+                Сайта), оставляя на сайте по веб-адресу ___ (далее — Сайт),
+                принадлежащем ООО НИК "Основа" (далее – Оператор, Администрация
+                Сайта), свои персональные данные путем заполнения полей
+              </p>
+            </div>
+            <div class="header__form--pd-agree">
+              <input
+                class="header__form--pd-checkbox"
+                name="pd-checkbox"
+                id="pd-checkbox"
+                type="checkbox"
+                required
+              />
+              <label for="pd-checkbox"
+                >Нажимая на кнопку, я даю свое согласие на обработку моих
+                персональных данных, в соответствии с Федеральным законом от
+                27.07.2006 года №152-Ф3</label
+              >
+            </div>
+          </div>
+        </div>
+        <div class="header__overlay header__modal-active"></div>
       </div>
     </header>
     <main class="main">
