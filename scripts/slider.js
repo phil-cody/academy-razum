@@ -32,7 +32,6 @@ for (let i = 0; i < sliderArr.length; i++) {
 
     cards.forEach((card) => {
       let i = 0;
-      console.log(`при i = ${i++} начальное положение card = ${card.offsetLeft}`);
       if (card.offsetLeft < currentScroll) {
         target = card;
       }

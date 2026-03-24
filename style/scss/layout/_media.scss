@@ -359,8 +359,15 @@
 }
 // ===== TABLET
 @media (max-width: 768px) {
+  main {
+    position: relative;
+    top: $spacing-xxxl;
+  }
   // ===== Header
   .header {
+    position: fixed;
+    z-index: 999;
+    padding: $spacing-sm;
     &__nav {
       display: none;
     }
@@ -431,6 +438,8 @@
   }
   // ===== Footer
   .footer {
+    position: relative;
+    top: $spacing-xxxl;
     .footer-contact {
       grid-template-columns: auto auto;
     }
@@ -902,11 +911,8 @@
     transform: translate(-50%, -50%) scale(0.8);
   }
 }
-@media (max-height: 750px) {
+@media (max-height: 750px)  {
   .header__form-modal {
-    transform: translate(-50%, -50%) scale(0.6);
-  }
-  .speakers__popup-card {
     transform: translate(-50%, -50%) scale(0.7);
   }
 }

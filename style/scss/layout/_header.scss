@@ -3,10 +3,10 @@
 
 .header {
   background-color: $surface;
-  padding: $spacing-none calc($spacing-xs + $spacing-xxxs);
+  padding: $spacing-xs calc($spacing-xs + $spacing-xxxs) $spacing-none;
+  width: 100%;
 
   & .container {
-    margin-top: $spacing-xs;
     display: flex;
     justify-content: space-between;
     align-items: center;

@@ -1,0 +1,60 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+.header__burger-menu {
+  width: 100%;
+  position: fixed;
+  z-index: 1000;
+  top: -100%;
+  left: 0;
+  background-color: $surface;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: top 0.5s ease;
+
+
+  .burger-menu__header {
+    width: 100%;
+    padding: $spacing-sm;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .burger-menu__close {
+    cursor: pointer;
+  }
+  .burger-menu__nav {
+    width: 100%;
+    padding: $spacing-xs;
+
+    nav ul {
+      display: flex;
+      flex-direction: column;
+      gap: $spacing-xxxs;
+      font-size: $text-md;
+      width: fit-content;
+    }
+  }
+  .burger-menu__contact {
+    align-self: flex-start;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: $spacing-xxxs;
+    padding: $spacing-xs;
+
+    span a {
+      font-weight: 700;
+      color: #637cf9;
+      font-size: $text-xs;
+    }
+
+    button {
+      padding: $spacing-xxs calc($spacing-xxxs + $spacing-xxl);
+      color: $text-inverse;
+    }
+  }
+}
+.burger-menu__open {
+  top: 0;
+}

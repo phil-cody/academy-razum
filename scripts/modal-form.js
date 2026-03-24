@@ -3,7 +3,6 @@ const btn = document.querySelector(".header__contact button");
 const overlayModal = document.querySelector(".header__overlay");
 
 btn.addEventListener("click", (event) => {
-  console.log('поймал')
   modal.classList.add("header__modal-active");
   overlayModal.classList.add("header__modal-active");
 
