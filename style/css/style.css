@@ -1805,9 +1805,6 @@ label {
 }
 @media (max-height: 750px) {
   .header__form-modal {
-    transform: translate(-50%, -50%) scale(0.6);
-  }
-  .speakers__popup-card {
     transform: translate(-50%, -50%) scale(0.7);
   }
 }
