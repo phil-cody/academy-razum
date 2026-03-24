@@ -698,8 +698,8 @@
         gap: $spacing-xxxs;
         height: 16px;
 
-        &-prev,
-        &-next {
+        .button__prev,
+        .button__next {
           border-radius: $radius-xs;
           padding: $spacing-xxs $spacing-md;
 
@@ -786,8 +786,8 @@
         gap: $spacing-xxxs;
         height: 16px;
 
-        &__prev,
-        &__next {
+        .button__prev,
+        .button__next {
           border-radius: $radius-xs;
           padding: $spacing-xxs $spacing-md;
 

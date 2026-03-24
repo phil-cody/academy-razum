@@ -329,6 +329,7 @@ label {
   grid-template-columns: 1fr 228px;
   grid-template-rows: auto auto auto;
   gap: 30px;
+  position: relative;
 }
 .speakers .container h2 {
   grid-column: 1;
@@ -353,7 +354,8 @@ label {
   align-self: end;
   height: 26px;
 }
-.speakers .container .speakers__button-prev, .speakers .container .speakers__button-next {
+.speakers .container .speakers__button .button__prev,
+.speakers .container .speakers__button .button__next {
   display: flex;
   align-items: center;
   background-color: #637cf9;
@@ -361,7 +363,7 @@ label {
   border: none;
   padding: 8px 30px;
 }
-.speakers .container .speakers__button-next img {
+.speakers .container .speakers__button .button__next img {
   transform: rotate(180deg);
 }
 .speakers .container .slider {
@@ -702,6 +704,7 @@ label {
   grid-template-columns: 1fr 228px;
   grid-template-rows: auto auto;
   row-gap: 30px;
+  position: relative;
 }
 .reviews .container .reviews-button {
   display: flex;
@@ -712,14 +715,15 @@ label {
   align-self: center;
   height: 26px;
 }
-.reviews .container .reviews-button__prev, .reviews .container .reviews-button__next {
+.reviews .container .reviews-button .button__prev,
+.reviews .container .reviews-button .button__next {
   display: flex;
   align-items: center;
   background-color: #637cf9;
   border-radius: 25px;
   padding: 8px 30px;
 }
-.reviews .container .reviews-button__next img {
+.reviews .container .reviews-button .button__next img {
   transform: rotate(180deg);
 }
 .reviews .container .slider {
@@ -1539,11 +1543,13 @@ label {
     gap: 5px;
     height: 16px;
   }
-  .speakers .container .speakers__button-prev, .speakers .container .speakers__button-next {
+  .speakers .container .speakers__button .button__prev,
+  .speakers .container .speakers__button .button__next {
     border-radius: 10px;
     padding: 8px 20px;
   }
-  .speakers .container .speakers__button-prev img, .speakers .container .speakers__button-next img {
+  .speakers .container .speakers__button .button__prev img,
+  .speakers .container .speakers__button .button__next img {
     width: 31px;
   }
   .speakers .container .slider-card__review p {
@@ -1591,11 +1597,13 @@ label {
     gap: 5px;
     height: 16px;
   }
-  .reviews .container .reviews-button__prev, .reviews .container .reviews-button__next {
+  .reviews .container .reviews-button .button__prev,
+  .reviews .container .reviews-button .button__next {
     border-radius: 10px;
     padding: 8px 20px;
   }
-  .reviews .container .reviews-button__prev img, .reviews .container .reviews-button__next img {
+  .reviews .container .reviews-button .button__prev img,
+  .reviews .container .reviews-button .button__next img {
     width: 31px;
   }
   .reviews .container .slider {

@@ -11,6 +11,7 @@
     grid-template-columns: 1fr 228px;
     grid-template-rows: auto auto auto;
     gap: $spacing-xxl;
+    position: relative;
 
     h2 {
       grid-column: 1;
@@ -38,8 +39,8 @@
       align-self: end;
       height: 26px;
 
-      &-prev,
-      &-next {
+      .button__prev,
+      .button__next {
         display: flex;
         align-items: center;
         background-color: $primary;
@@ -47,7 +48,7 @@
         border: none;
         padding: $spacing-xxs $spacing-xxl;
       }
-      &-next img {
+      .button__next img {
         transform: rotate(180deg);
       }
     }

@@ -10,6 +10,7 @@
     grid-template-columns: 1fr 228px;
     grid-template-rows: auto auto;
     row-gap: $spacing-xxl;
+    position: relative;
 
     .reviews-button {
       display: flex;
@@ -20,15 +21,15 @@
       align-self: center;
       height: 26px;
 
-      &__prev,
-      &__next {
+      .button__prev,
+      .button__next {
         display: flex;
         align-items: center;
         background-color: $primary;
         border-radius: $spacing-xl;
         padding: $spacing-xxs $spacing-xxl;
       }
-      &__next img {
+      .button__next img {
         transform: rotate(180deg);
       }
     }
