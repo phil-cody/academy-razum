@@ -1,6 +1,6 @@
 const cardArr = Array.from(document.querySelectorAll(".pop-up"));
 let popupArr = document.querySelectorAll(".speakers__popup-card");
-let overlay = document.querySelector(".speakers__overlay");
+let overlayPopup = document.querySelector(".speakers__overlay");
 
 for (let i = 0; i < cardArr.length; i++) {
 
@@ -9,7 +9,7 @@ for (let i = 0; i < cardArr.length; i++) {
       event.preventDefault();
 
       popupArr[i].classList.add("popup-active");
-      overlay.classList.add("popup-active");
+      overlayPopup.classList.add("popup-active");
 
       document.addEventListener("click", (event) => {
         if (
@@ -17,7 +17,7 @@ for (let i = 0; i < cardArr.length; i++) {
           event.target.classList.contains("speakers__overlay")
         ) {
           popupArr[i].classList.remove("popup-active");
-          overlay.classList.remove("popup-active");
+          overlayPopup.classList.remove("popup-active");
         }
       });
     }

@@ -40,6 +40,61 @@
 
   &__burger {
     display: none;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    height: $spacing-xxl;
+
+    span {
+      width: $spacing-xxl;
+      height: $spacing-xxxxs;
+      background-color: $primary;
+      position: relative;
+
+      &:first-child {
+        top: -3px;
+      }
+      &:last-child {
+        bottom: -3px;
+      }
+    }
+    &.burger-open {
+      span {
+        &:first-child {
+          top: 1px;
+          transform: rotate(45deg);
+        }
+        &:last-child {
+          bottom: 1px;
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+  &__burger-close {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    height: $spacing-xxl;
+    z-index: 2;
+
+    span {
+      width: $spacing-xxl;
+      height: $spacing-xxxxs;
+      background-color: $primary;
+      position: relative;
+      z-index: 1;
+
+      &:first-child {
+          top: 1px;
+          transform: rotate(45deg);
+        }
+        &:last-child {
+          bottom: 1px;
+          transform: rotate(-45deg);
+        }
+    }
   }
 }
 

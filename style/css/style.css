@@ -227,6 +227,53 @@ label {
 }
 .header__burger {
   display: none;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  height: 30px;
+}
+.header__burger span {
+  width: 30px;
+  height: 2px;
+  background-color: #637cf9;
+  position: relative;
+}
+.header__burger span:first-child {
+  top: -3px;
+}
+.header__burger span:last-child {
+  bottom: -3px;
+}
+.header__burger.burger-open span:first-child {
+  top: 1px;
+  transform: rotate(45deg);
+}
+.header__burger.burger-open span:last-child {
+  bottom: 1px;
+  transform: rotate(-45deg);
+}
+.header__burger-close {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  height: 30px;
+  z-index: 2;
+}
+.header__burger-close span {
+  width: 30px;
+  height: 2px;
+  background-color: #637cf9;
+  position: relative;
+  z-index: 1;
+}
+.header__burger-close span:first-child {
+  top: 1px;
+  transform: rotate(45deg);
+}
+.header__burger-close span:last-child {
+  bottom: 1px;
+  transform: rotate(-45deg);
 }
 
 .header__overlay {
@@ -252,7 +299,7 @@ label {
   transform: translate(-50%, -50%);
   opacity: 0;
   visibility: hidden;
-  transition: all 0.5s ease;
+  transition: all 0.25s ease;
   z-index: 1000;
   background-image: url("../../image/backgrounds/form-background.png");
   background-size: 100% 100%;
@@ -355,6 +402,11 @@ label {
   opacity: 1;
 }
 
+.active {
+  visibility: visible;
+  opacity: 1;
+}
+
 .header__burger-menu {
   width: 100%;
   position: fixed;
@@ -365,7 +417,7 @@ label {
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: top 0.5s ease;
+  transition: top 0.25s ease;
 }
 .header__burger-menu .burger-menu__header {
   width: 100%;
@@ -664,7 +716,7 @@ label {
   z-index: 1000;
   opacity: 0;
   visibility: hidden;
-  transition: all 0.5s ease;
+  transition: all 0.25s ease;
 }
 .speakers__popup-card .popup__header {
   display: grid;
@@ -1483,8 +1535,8 @@ label {
   .header__contact {
     display: none;
   }
-  .header__burger {
-    display: block;
+  .header__burger, .header__burger-close {
+    display: flex;
   }
   .speakers .container {
     grid-template-columns: 1fr;
