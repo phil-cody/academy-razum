@@ -1699,7 +1699,7 @@ label {
   .speakers .container .speakers__button .button__prev,
   .speakers .container .speakers__button .button__next {
     border-radius: 10px;
-    padding: 8px 20px;
+    padding: 10px 20px;
   }
   .speakers .container .speakers__button .button__prev img,
   .speakers .container .speakers__button .button__next img {
@@ -1753,7 +1753,7 @@ label {
   .reviews .container .reviews-button .button__prev,
   .reviews .container .reviews-button .button__next {
     border-radius: 10px;
-    padding: 8px 20px;
+    padding: 10px 20px;
   }
   .reviews .container .reviews-button .button__prev img,
   .reviews .container .reviews-button .button__next img {
