@@ -2,62 +2,83 @@ const sliderArr = Array.from(document.querySelectorAll(".slider"));
 const prevArr = Array.from(document.querySelectorAll(".button__prev"));
 const nextArr = Array.from(document.querySelectorAll(".button__next"));
 
+const fault = 4;
+
 for (let i = 0; i < sliderArr.length; i++) {
   const cards = Array.from(sliderArr[i].children);
   const prev = prevArr[i];
   const next = nextArr[i];
 
-  let sliderWidth = sliderArr[i].scrollWidth;
-  let viewSliderWidth = sliderArr[i].getBoundingClientRect().width;
-
-  if (sliderArr[i].scrollLeft <= cards[1].offsetLeft) {
-    prev.disable = false;
+  if (sliderArr[i].scrollLeft <= fault) {
+    prev.disabled = true;
   }
 
   sliderArr[i].addEventListener("scroll", () => {
-    if (sliderWidth - sliderArr[i].scrollLeft <= viewSliderWidth) {
-      next.disable = true;
-    } else if (sliderArr[i].scrollLeft <= cards[0].offsetLeft) {
-      prev.disable = true;
+    let sliderWidth = sliderArr[i].scrollWidth;
+    let viewSliderWidth = sliderArr[i].clientWidth;
+    const maxScroll = sliderWidth - viewSliderWidth;
+
+    if (sliderArr[i].scrollLeft >= maxScroll - fault) {
+      next.disabled = true;
+    } else if (sliderArr[i].scrollLeft <= fault) {
+      prev.disabled = true;
     } else {
-      next.disable = false;
-      prev.disable = false;
+      next.disabled = false;
+      prev.disabled = false;
     }
   });
 
   prev.addEventListener("click", () => {
-    const currentScroll = sliderArr[i].scrollLeft;
-
     let target = null;
 
-    cards.forEach((card) => {
-      let i = 0;
-      console.log(`при i = ${i++} начальное положение card = ${card.offsetLeft}`);
-      if (card.offsetLeft < currentScroll) {
-        target = card;
-      }
-    });
+    const sliderRect = sliderArr[i].getBoundingClientRect();
 
-    if (target) {
-      sliderArr[i].scrollTo({ left: target.offsetLeft, behavior: "smooth" });
+    for (let j = cards.length - 1; j >= 0; j--) {
+      const card = cards[j];
+      const cardRect = card.getBoundingClientRect();
+
+      if (cardRect.left < sliderRect.left - fault) {
+        target = card;
+        break;
+      }
     }
+
+    if (!target) return;
+
+    const targetRect = target.getBoundingClientRect();
+    const newScroll =
+      targetRect.left - sliderRect.left + sliderArr[i].scrollLeft;
+
+    sliderArr[i].scrollTo({
+      left: newScroll,
+      behavior: "smooth",
+    });
   });
 
   next.addEventListener("click", () => {
-    const currentScroll = sliderArr[i].scrollLeft;
-
     let target = null;
 
-    for (let i = cards.length - 1; i >= 0; i--) {
-      const card = cards[i];
+    const sliderRect = sliderArr[i].getBoundingClientRect();
 
-      if (card.offsetLeft > currentScroll) {
+    for (let j = 0; j < cards.length; j++) {
+      const card = cards[j];
+      const cardRect = card.getBoundingClientRect();
+
+      if (cardRect.left > sliderRect.left + fault) {
         target = card;
+        break;
       }
     }
 
-    if (target) {
-      sliderArr[i].scrollTo({ left: target.offsetLeft, behavior: "smooth" });
-    }
+    if (!target) return;
+
+    const targetRect = target.getBoundingClientRect();
+    const newScroll =
+      targetRect.left - sliderRect.left + sliderArr[i].scrollLeft;
+
+    sliderArr[i].scrollTo({
+      left: newScroll,
+      behavior: "smooth",
+    });
   });
 }

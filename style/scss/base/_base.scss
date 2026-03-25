@@ -13,7 +13,7 @@ html {
 body {
   @include text;
   font-size: $text-xxl;
-  background-color: $background;
+  background-color: $surface;
   min-height: 100%;
   display: flex;
   flex-direction: column;

@@ -359,8 +359,15 @@
 }
 // ===== TABLET
 @media (max-width: 768px) {
+  main {
+    position: relative;
+    top: $spacing-xxxl;
+  }
   // ===== Header
   .header {
+    position: fixed;
+    z-index: 999;
+    padding: $spacing-sm;
     &__nav {
       display: none;
     }
@@ -369,8 +376,8 @@
       display: none;
     }
 
-    &__burger {
-      display: block;
+    &__burger, &__burger-close {
+      display: flex;
     }
   }
   // ===== Speakers
@@ -431,6 +438,8 @@
   }
   // ===== Footer
   .footer {
+    position: relative;
+    top: $spacing-xxxl;
     .footer-contact {
       grid-template-columns: auto auto;
     }
@@ -599,13 +608,9 @@
     &-text {
       text-align: center;
     }
-    &-sticker {
-    }
     &-content {
       grid-template-columns: 1fr;
       justify-self: stretch;
-    }
-    &-card {
     }
     button {
       grid-row: 3;
