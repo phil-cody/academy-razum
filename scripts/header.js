@@ -1,21 +1,24 @@
 const modal = document.querySelector(".header__form-modal");
-const btn = document.querySelector(".header__contact button");
-const modalBtn = document.querySelector('.burger-menu__contact .btn');
 
 const menu = document.querySelector(".header__burger-menu");
 const burgerBtn = document.querySelector(".header__burger");
 
 const overlay = document.querySelector(".header__overlay");
 
-// состояния
+const triggers = document.querySelectorAll('[data-open-modal]');
+
+triggers.forEach(btn => {
+  btn.addEventListener('click', e => {
+    e.preventDefault();
+    openModal();
+  })
+})
+
 let isModalOpen = false;
 let isMenuOpen = false;
 
-
-// --- функции ---
-
 function openModal() {
-  closeMenu();
+  if (isMenuOpen) closeMenu();
 
   modal.classList.add("header__modal-active");
   overlay.classList.add("active");
@@ -46,21 +49,11 @@ function closeMenu() {
   if (!isModalOpen) overlay.classList.remove("active");
 }
 
-
-// --- кнопки ---
-
-btn.addEventListener("click", openModal);
-modalBtn.addEventListener("click", openModal);
-
 burgerBtn.addEventListener("click", openMenu);
-
-
-// --- единый обработчик клика ---
 
 document.addEventListener("click", (event) => {
   const target = event.target;
 
-  // закрытие модалки
   if (
     isModalOpen &&
     (
@@ -71,7 +64,6 @@ document.addEventListener("click", (event) => {
     closeModal();
   }
 
-  // закрытие меню
   if (
     isMenuOpen &&
     (
