@@ -433,7 +433,7 @@
 @media (max-width: 768px) {
   main {
     position: relative;
-    top: $spacing-xxxl;
+    padding-top: calc($spacing-xxl * 2);
   }
   // ===== Header
   .header {
@@ -1044,7 +1044,12 @@
   }
 }
 // Media queries for low height
-@media (max-height: 670px)  {
+@media (max-height: 930px)  {
+  .header__form-modal {
+    transform: translate(-50%, -50%) scaleY(0.9);
+  }
+}
+@media (max-height: 840px) and (min-width: 665px)  {
   .header__form-modal {
     transform: translate(-50%, -50%) scale(0.8);
   }
