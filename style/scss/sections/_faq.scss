@@ -27,22 +27,38 @@
     align-items: flex-start;
     display: flex;
     justify-content: space-between;
+    &.active {
+
+      .faq-text {
+        gap: $spacing-xs;
+      }
+      img {
+        transform: rotate(45deg);
+      }
+    }
   }
   &-text {
     display: flex;
     flex-direction: column;
-    gap: $spacing-xs;
     align-self: center;
+    max-width: 90%;
+    width: 90%;
+    height: fit-content;
+
     h6 {
       font-weight: 400;
+      width: 100%;
     }
     p {
-      display: none;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease;
       font-size: $text-md;
     }
   }
   &-open {
     aspect-ratio: 1 / 1;
+    min-width: $spacing-xxxl;
     width: $spacing-xxxl;
     border-radius: 100%;
     background-color: rgba(99, 124, 249, 0.25);
@@ -53,6 +69,7 @@
     img {
       aspect-ratio: 1 / 1;
       width: $spacing-sm;
+      transition: all 0.35s ease;
     }
   }
 }

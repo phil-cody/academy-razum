@@ -1072,21 +1072,33 @@ label {
   display: flex;
   justify-content: space-between;
 }
+.faq-block.active .faq-text {
+  gap: 10px;
+}
+.faq-block.active img {
+  transform: rotate(45deg);
+}
 .faq-text {
   display: flex;
   flex-direction: column;
-  gap: 10px;
   align-self: center;
+  max-width: 90%;
+  width: 90%;
+  height: fit-content;
 }
 .faq-text h6 {
   font-weight: 400;
+  width: 100%;
 }
 .faq-text p {
-  display: none;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
   font-size: 14px;
 }
 .faq-open {
   aspect-ratio: 1/1;
+  min-width: 40px;
   width: 40px;
   border-radius: 100%;
   background-color: rgba(99, 124, 249, 0.25);
@@ -1097,6 +1109,7 @@ label {
 .faq-open img {
   aspect-ratio: 1/1;
   width: 15px;
+  transition: all 0.35s ease;
 }
 
 .form {
