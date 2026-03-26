@@ -1,0 +1,28 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/variables' as *;
+
+.pd {
+  background-color: $surface;
+  padding: $spacing-sm calc($spacing-xs + $spacing-xxxxs) calc($spacing-xxl * 2);
+
+  .container {
+    background-color: $background;
+    border-radius: $radius-l;
+    padding: calc($spacing-xxl * 2) $spacing-xxxl;
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-md;
+  }
+
+  h2 {
+    font-size: $heading-4;
+  }
+
+  p {
+    font-size: $text-lg;
+  }
+
+  h2, p {
+    max-width: 93%;
+  }
+}

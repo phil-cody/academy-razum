@@ -1264,6 +1264,28 @@ label {
   justify-self: flex-end;
 }
 
+.pd {
+  background-color: #f1f1f1;
+  padding: 15px 12px 60px;
+}
+.pd .container {
+  background-color: #fff;
+  border-radius: 30px;
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.pd h2 {
+  font-size: 30px;
+}
+.pd p {
+  font-size: 16px;
+}
+.pd h2, .pd p {
+  max-width: 93%;
+}
+
 @media (max-width: 1280px) {
   .programms-cards {
     grid-template-columns: repeat(2, 1fr);
@@ -1531,6 +1553,19 @@ label {
   .footer .footer-info__block.last {
     grid-column: 2;
   }
+  .pd {
+    padding: 8px 12px 40px;
+  }
+  .pd .container {
+    padding: 40px 30px;
+    gap: 16px;
+  }
+  .pd .container p {
+    font-size: 14px;
+  }
+  .pd .container h2, .pd .container p {
+    max-width: 98%;
+  }
 }
 @media (max-width: 768px) {
   main {
@@ -1541,6 +1576,7 @@ label {
     position: fixed;
     z-index: 999;
     padding: 15px;
+    padding-bottom: 0;
   }
   .header__nav {
     display: none;
@@ -1930,6 +1966,16 @@ label {
   .form .form__pd-text p,
   .form .form__pd-agree p {
     font-size: 10px;
+  }
+  .pd {
+    padding: 15px 12px 20px;
+  }
+  .pd .container {
+    border-radius: 10px;
+    padding: 30px calc(2px + spacing-xs);
+  }
+  .pd .container p {
+    font-size: 12px;
   }
 }
 @media (max-height: 670px) {

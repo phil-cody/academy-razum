@@ -356,6 +356,23 @@
       }
     }
   }
+  // ===== Personal Data
+  .pd {
+    padding: $spacing-xxs calc($spacing-xxxxs + $spacing-xs) $spacing-xxxl;
+
+    .container {
+      padding: $spacing-xxxl $spacing-xxl;
+      gap: calc($spacing-xxs * 2);
+      
+      p {
+        font-size: $text-md;
+      }
+
+      h2, p {
+        max-width: 98%;
+      }
+    }
+  }
 }
 // ===== TABLET
 @media (max-width: 768px) {
@@ -368,6 +385,7 @@
     position: fixed;
     z-index: 999;
     padding: $spacing-sm;
+    padding-bottom: $spacing-none;
     &__nav {
       display: none;
     }
@@ -897,6 +915,19 @@
     .form__pd-agree {
       p {
         font-size: $text-xs;
+      }
+    }
+  }
+  // ===== Personal Data
+  .pd {
+    padding: $spacing-sm calc($spacing-xxxxs + $spacing-xs) $spacing-md;
+
+    .container {
+      border-radius: $radius-xs;
+      padding: $spacing-xxl calc($spacing-xxxxs + spacing-xs);
+
+      p {
+        font-size: $text-sm;
       }
     }
   }
