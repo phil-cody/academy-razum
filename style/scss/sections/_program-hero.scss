@@ -1,0 +1,48 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+.hero-program {
+  padding: $spacing-xs calc($spacing-xxxxs + $spacing-xs) calc($spacing-xxl * 2);
+
+  .container {
+    background-color: $primary;
+    border-radius: $radius-l;
+    padding: calc($spacing-xl * 2);
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-xxl;
+
+    h1 {
+      color: $text-inverse;
+      font-size: $heading-2;
+      max-width: 660px;
+    }
+
+    .hero__stickers {
+      display: flex;
+      flex-wrap: wrap;
+      gap: $spacing-xs;
+
+      .hero__sticker {
+        background-color: $background;
+        border-radius: $radius-s;
+        padding: $spacing-xxxs $spacing-sm;
+
+        p {
+          font-weight: 700;
+          font-size: $text-md;
+        }
+      }
+    }
+    .hero__footer {
+      display: flex;
+      gap: $spacing-md;
+      align-items: center;
+
+      p {
+        color: $text-inverse;
+        font-weight: 700;
+      }
+    }
+  }
+}

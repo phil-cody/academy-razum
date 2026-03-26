@@ -1,12 +1,17 @@
 @use './abstracts/variables' as *;
 @use './abstracts/mixins' as *;
+
 @use './base/base' as *;
 @use './base/reset' as *;
 @use './base/typography' as *;
+
 @use './components/button' as *;
+@use './layout/overlay' as *;
+
 @use './layout/header' as *;
 @use './components/form-modal' as *;
 @use './components/burger-menu' as *;
+
 @use './sections/hero' as *;
 @use './sections/advantages' as *;
 @use './sections/speakers' as *;
@@ -18,8 +23,13 @@
 @use './sections/reasons' as *;
 @use './sections/faq' as *;
 @use './sections/form' as *;
+
 @use './layout/footer' as *;
+
 @use './sections/personal-data' as *;
 
+@use './sections/program-hero' as *;
+@use './sections/program-info' as *;
+@use './sections/program-structure' as *;
+
 @use './layout/media' as *;
-@use './layout/overlay' as *;

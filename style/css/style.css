@@ -194,6 +194,11 @@ label {
   left: -10px;
 }
 
+.overlay {
+  visibility: visible;
+  opacity: 1;
+}
+
 .header {
   background-color: #f1f1f1;
   padding: 10px 15px 0;
@@ -1286,6 +1291,131 @@ label {
   max-width: 93%;
 }
 
+.hero-program {
+  padding: 10px 12px 60px;
+}
+.hero-program .container {
+  background-color: #637cf9;
+  border-radius: 30px;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.hero-program .container h1 {
+  color: #fff;
+  font-size: 45px;
+  max-width: 660px;
+}
+.hero-program .container .hero__stickers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.hero-program .container .hero__stickers .hero__sticker {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 5px 15px;
+}
+.hero-program .container .hero__stickers .hero__sticker p {
+  font-weight: 700;
+  font-size: 14px;
+}
+.hero-program .container .hero__footer {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.hero-program .container .hero__footer p {
+  color: #fff;
+  font-weight: 700;
+}
+
+.info-program {
+  padding: 0 12px 60px;
+}
+.info-program .container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.info-program .container h2 {
+  font-size: 30px;
+}
+.info-program .container .info__content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+.info-program .container .info__content .info__block {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.info-program .container .info__content .info__block h6 {
+  font-size: 16px;
+  color: #637cf9;
+}
+.info-program .container .info__content .info__block p {
+  font-size: 14px;
+  max-width: 90%;
+}
+
+.structure-program {
+  padding: 0 12px 30px;
+}
+.structure-program .container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.structure-program .container h2 {
+  font-size: 30px;
+}
+.structure-program .container .structure__content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.structure-program .container .structure__content .structure__block {
+  background-color: #fff;
+  padding: 20px 15px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.structure-program .container .structure__content .structure__block h5 {
+  color: #637cf9;
+  font-size: 16px;
+}
+.structure-program .container .structure__content .structure__block .structure__description {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 90%;
+}
+.structure-program .container .structure__content .structure__block .structure__description .structure__description-block {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.structure-program .container .structure__content .structure__block .structure__description .structure__description-block h6, .structure-program .container .structure__content .structure__block .structure__description .structure__description-block li {
+  font-size: 14px;
+}
+.structure-program .container .structure__content .structure__block .structure__description .structure__description-block ul {
+  padding-left: 20px;
+}
+.structure-program .container .structure__content .structure__block .structure__description .structure__description-block ul li {
+  list-style-type: disc;
+}
+.structure-program .container .structure__content .structure__block .structure__description .structure__description-block ul li::marker {
+  font-size: 0.6em;
+}
+
 @media (max-width: 1280px) {
   .programms-cards {
     grid-template-columns: repeat(2, 1fr);
@@ -1566,6 +1696,44 @@ label {
   .pd .container h2, .pd .container p {
     max-width: 98%;
   }
+  .hero-program {
+    padding: 15px 12px 30px;
+  }
+  .hero-program .container {
+    padding: 40px 20px;
+    gap: 20px;
+  }
+  .hero-program .container h1 {
+    font-size: 30px;
+    max-width: 570px;
+  }
+  .hero-program .container .hero__stickers {
+    max-width: 570px;
+  }
+  .hero-program .container .hero__stickers .hero__sticker p {
+    font-size: 12px;
+  }
+  .hero-program .container .hero__footer {
+    gap: 30px;
+  }
+  .hero-program .container .hero__footer p {
+    font-size: 14px;
+  }
+  .info-program {
+    padding-bottom: 30px;
+  }
+  .info-program .container .info__content {
+    gap: 8px;
+  }
+  .info-program .container .info__content .info__block {
+    padding: 30px 15px;
+  }
+  .structure-program {
+    padding-bottom: 25px;
+  }
+  .structure-program .container {
+    gap: 20px;
+  }
 }
 @media (max-width: 768px) {
   main {
@@ -1576,7 +1744,6 @@ label {
     position: fixed;
     z-index: 999;
     padding: 15px;
-    padding-bottom: 0;
   }
   .header__nav {
     display: none;
@@ -1662,21 +1829,16 @@ label {
   }
 }
 @media (max-width: 668px) {
-  .header__form-modal h2 {
-    font-size: 30px;
-  }
-  .header__form-modal p {
-    font-size: 14px;
-  }
-  .header__form--pd-text p {
-    font-size: 10px;
-  }
   .header__form-modal {
     gap: 20px;
     padding: 50px 0;
   }
+  .header__form-modal h2 {
+    font-size: 30px;
+  }
   .header__form-modal p {
     max-width: 293px;
+    font-size: 14px;
   }
   .header__form--content {
     min-width: 300px;
@@ -1684,6 +1846,7 @@ label {
   }
   .header__form--pd-text p {
     max-width: 100%;
+    font-size: 10px;
   }
   .hero__text {
     gap: 25px;
@@ -1823,6 +1986,51 @@ label {
     justify-self: start;
     grid-column: 1;
     grid-row: 3;
+  }
+  .hero-program {
+    padding: 30px 8px;
+  }
+  .hero-program .container {
+    padding: 30px 15px;
+  }
+  .hero-program .container h1 {
+    font-size: 25px;
+    max-width: 97%;
+  }
+  .hero-program .container .hero__stickers {
+    max-width: 100%;
+  }
+  .hero-program .container .hero__stickers p {
+    font-size: 10px;
+  }
+  .hero-program .container .hero__footer {
+    gap: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .info-program {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .info-program .container h2 {
+    font-size: 20px;
+  }
+  .info-program .container .info__content {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .info-program .container .info__content .info__block {
+    border-radius: 15px;
+    gap: 15px;
+  }
+  .info-program .container .info__content .info__block h6 {
+    font-size: 14px;
+  }
+  .structure-program {
+    padding-bottom: 20px;
+  }
+  .structure-program .container h2 {
+    font-size: 20px;
   }
 }
 @media (max-width: 430px) {
@@ -1982,10 +2190,6 @@ label {
   .header__form-modal {
     transform: translate(-50%, -50%) scale(0.8);
   }
-}
-.overlay {
-  visibility: visible;
-  opacity: 1;
 }
 
 /*# sourceMappingURL=style.css.map */

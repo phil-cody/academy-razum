@@ -1,0 +1,42 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+.info-program {
+  padding: $spacing-none calc($spacing-xs + $spacing-xxxxs)
+    calc($spacing-xxl * 2);
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-md;
+
+    h2 {
+      font-size: $heading-4;
+    }
+
+    .info__content {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: $spacing-xs;
+
+      .info__block {
+        background-color: $background;
+        padding: $spacing-xxl;
+        border-radius: $radius-m;
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-xs;
+
+        h6 {
+          font-size: $text-lg;
+          color: $primary;
+        }
+
+        p {
+          font-size: $text-md;
+          max-width: 90%;
+        }
+      }
+    }
+  }
+}
