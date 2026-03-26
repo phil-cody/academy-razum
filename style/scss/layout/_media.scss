@@ -902,16 +902,8 @@
   }
 }
 // Media queries for low height
-@media (max-height: 750px)  {
+@media (max-height: 670px)  {
   .header__form-modal {
     transform: translate(-50%, -50%) scale(0.8);
-  }
-}
-@media (max-height: 460px) {
-  .header__form-modal {
-    transform: translate(-50%, -50%) scale(0.5);
-  }
-  .speakers__popup-card {
-    transform: translate(-50%, -50%) scale(0.6);
   }
 }

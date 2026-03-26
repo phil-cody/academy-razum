@@ -4,8 +4,6 @@ faqBlocks.forEach((block) => {
   const answer = block.querySelector('.faq-text p');
 
   block.addEventListener("click", (e) => {
-    const trigger = e.target.closest(".faq-text h6, .faq-open");
-    if (!trigger) return;
 
     const isActive = block.classList.contains("active");
 
