@@ -171,6 +171,7 @@ label {
 @font-face {
   font-family: "Manrope";
   src: url("../../fonts/Manrope-VariableFont_wght.ttf");
+  font-display: swap;
 }
 .btn {
   padding: 0;
@@ -1076,6 +1077,7 @@ label {
   align-items: flex-start;
   display: flex;
   justify-content: space-between;
+  cursor: pointer;
 }
 .faq-block.active .faq-text {
   gap: 10px;

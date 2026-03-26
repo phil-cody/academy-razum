@@ -27,6 +27,8 @@
     align-items: flex-start;
     display: flex;
     justify-content: space-between;
+    cursor: pointer;
+
     &.active {
 
       .faq-text {
